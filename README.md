@@ -1,2 +1,1 @@
-# vpkp
-visual programming kurs project
+РГР по визуальному программированию 
