@@ -1,11 +1,6 @@
-using System;
-using System.Reflection;
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Interactivity;
-using Avalonia.Media.Imaging;
-using Avalonia.Platform;
 using vpkp.ViewModels;
 
 namespace vpkp.Views

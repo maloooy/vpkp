@@ -5,6 +5,7 @@
 			 xmlns:models="clr-namespace:vpkp.Models"
 			 xmlns:dbm="clr-namespace:vpkp.Models.Database"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             Background="Pink"
              x:Class="vpkp.Views.FirstView">
   <UserControl.Styles>
     <Style Selector="ScrollViewer.sv1">
@@ -14,12 +15,6 @@
       <Setter Property="Padding" Value="0,0,0,16"/>
       <Setter Property="AllowAutoHide" Value="False"/>
     </Style>
-    <Style Selector="ScrollViewer.sv2">
-      <Setter Property="VerticalScrollBarVisibility" Value="Disabled"/>
-      <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
-      <Setter Property="HorizontalContentAlignment" Value="Left"/>
-      <Setter Property="VerticalContentAlignment" Value="Top"/>
-    </Style>
     <Style Selector="DockPanel.dp1">
       <Setter Property="HorizontalAlignment" Value="Stretch"/>
       <Setter Property="VerticalAlignment" Value="Stretch"/>
@@ -27,37 +22,36 @@
     <Style Selector="Button.b1">
       <Setter Property="VerticalAlignment" Value="Stretch"/>
       <Setter Property="VerticalContentAlignment" Value="Center"/>
-      <Setter Property="Background" Value="White"/>
+      <Setter Property="Background" Value="Pink"/>
       <Setter Property="BorderThickness" Value="1"/>
-      <Setter Property="BorderBrush" Value="Gray"/>
+      <Setter Property="BorderBrush" Value="Black"/>
     </Style>
     <Style Selector="Button.b2">
       <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
       <Setter Property="VerticalContentAlignment" Value="Stretch"/>
-      <Setter Property="Background" Value="LightGray"/>
+      <Setter Property="Background" Value="Pink"/>
       <Setter Property="BorderThickness" Value="0"/>
-      <Setter Property="BorderBrush" Value="Gray"/>
     </Style>
     <Style Selector="Button.b3">
       <Setter Property="HorizontalContentAlignment" Value="Center"/>
       <Setter Property="VerticalContentAlignment" Value="Center"/>
       <Setter Property="HorizontalAlignment" Value="Stretch"/>
       <Setter Property="VerticalAlignment" Value="Stretch"/>
-      <Setter Property="Background" Value="LightGray"/>
+      <Setter Property="Background" Value="Pink"/>
       <Setter Property="BorderThickness" Value="0"/>
-      <Setter Property="BorderBrush" Value="Gray"/>
     </Style>
     <Style Selector="TabControl.tc1">
       <Setter Property="VerticalAlignment" Value="Stretch"/>
       <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
       <Setter Property="VerticalContentAlignment" Value="Stretch"/>
       <Setter Property="TabStripPlacement" Value="Left"/>
+      <Setter Property="BorderThickness" Value="1"/>
     </Style>
     <Style Selector="Border.br1">
       <Setter Property="HorizontalAlignment" Value="Stretch"/>
       <Setter Property="VerticalAlignment" Value="Stretch"/>
+      <Setter Property="Background" Value="Pink"/>
       <Setter Property="BorderThickness" Value="0"/>
-      <Setter Property="BorderBrush" Value="Gray"/>
     </Style>
   </UserControl.Styles>
   <Grid RowDefinitions="2.2*,16.7*, 1.1*, 1.1*, 1.1*">
@@ -70,10 +64,10 @@
               <Border Classes="br1">
                 <Grid ColumnDefinitions="4*,*">
                   <TextBlock Grid.Column="0" Text="{Binding Header}"/>
-                  <Button Grid.Column="1" Content=""
+                  <Button Grid.Column="1" Content="X"
 									 IsVisible="{Binding ButtonVisible}"
 									 Classes="b2"
-									 Command="{Binding $parent[TabControl].DataContext.ButtonRemoveStringTab}"
+									 Command="{Binding $parent[TabControl].DataContext.ButtonDeleteTab}"
 									 CommandParameter="{Binding}"/>
                 </Grid>
               </Border>

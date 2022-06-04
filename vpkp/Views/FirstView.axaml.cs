@@ -1,12 +1,9 @@
-using Avalonia;
 using Avalonia.Interactivity;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using vpkp.Models;
 using vpkp.Models.StaticTabs;
-using Microsoft.EntityFrameworkCore;
 using vpkp.ViewModels;
-using vpkp.ViewModels.StaticTableCreateRowViewModels;
 using vpkp.Views.StaticTableCreateRowViews;
 using vpkp.Models.Database;
 
@@ -35,7 +32,7 @@ namespace vpkp.Views
             {
                 if (selectedTab is DynamicTab)
                 {
-                    var selectedItems = (selectedTab as DynamicTab).BindedList;
+                    var selectedItems = (selectedTab as DynamicTab).ObjectList;
                     if (selectedItems != null)
                         this.Find<DataGrid>("DataTable").Items = selectedItems;
                 }

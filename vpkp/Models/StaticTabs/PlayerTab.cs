@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using vpkp.Models.Database;
 
@@ -20,6 +17,7 @@ namespace vpkp.Models.StaticTabs
             DataColumns.Add("Age");
             DataColumns.Add("Number");
             DataColumns.Add("ClubId");
+            ObjectList = DBS.ToList<object>();
         }
 
         new public DbSet<Player>? DBS { get; set; }

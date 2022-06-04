@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace vpkp.Models.Database
+﻿namespace vpkp.Models.Database
 {
     public partial class MatchStatistic
     {

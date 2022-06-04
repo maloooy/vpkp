@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ReactiveUI;
+using System.Reactive;
+using vpkp.Models;
+
 
 namespace vpkp.ViewModels
 {
@@ -11,7 +10,26 @@ namespace vpkp.ViewModels
         public SelectDBViewModel(MainWindowViewModel? mainContext = null)
         {
             MainContext = mainContext;
+            ButtonChangeTable = ReactiveCommand.Create<MyTab, Unit>((tab) =>
+            {
+                SelectedTab = tab;
+                return Unit.Default;
+            });
         }
         public MainWindowViewModel? MainContext { get; set; }
+        MyTab selectedTab;
+        public MyTab SelectedTab
+        {
+            get { return selectedTab; }
+            set { this.RaiseAndSetIfChanged(ref selectedTab, value); }
+        }
+
+        string where = @"";
+        public string Where
+        {
+            get { return where; }
+            set { this.RaiseAndSetIfChanged(ref where, value); }
+        }
+        public ReactiveCommand<MyTab, Unit> ButtonChangeTable { get; }
     }
 }

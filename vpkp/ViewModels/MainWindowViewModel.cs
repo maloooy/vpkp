@@ -1,10 +1,6 @@
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using ReactiveUI;
-using System.Linq;
-using System.Reactive.Linq;
 using vpkp.Models;
 using vpkp.Models.Database;
 using vpkp.Models.StaticTabs;
@@ -78,8 +74,6 @@ namespace vpkp.ViewModels
         private void CreateQueries()
         {
             Queries = new ObservableCollection<Query>();
-            Queries.Add(new Query("1 request"));
-            Queries.Add(new Query("2 request"));
         }
     }
 }
